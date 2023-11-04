@@ -1,0 +1,15 @@
+==4298== Memcheck, a memory error detector
+==4298== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4298== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4298== Command: ./kNN
+==4298== Parent PID: 4252
+==4298== 
+==4298== 
+==4298== HEAP SUMMARY:
+==4298==     in use at exit: 0 bytes in 0 blocks
+==4298==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==4298== 
+==4298== All heap blocks were freed -- no leaks are possible
+==4298== 
+==4298== For lists of detected and suppressed errors, rerun with: -s
+==4298== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

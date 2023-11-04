@@ -1,0 +1,66 @@
+==4370== Memcheck, a memory error detector
+==4370== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4370== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4370== Command: ./mk
+==4370== Parent PID: 4252
+==4370== 
+==4370== 
+==4370== Process terminating with default action of signal 2 (SIGINT)
+==4370==    at 0x109D79: autocorrect (mk.c:257)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x109DAE: autocorrect (mk.c:258)
+==4370==    by 0x10A071: main (mk.c:310)
+==4370== 
+==4370== HEAP SUMMARY:
+==4370==     in use at exit: 12,303,371 bytes in 102,286 blocks
+==4370==   total heap usage: 103,948 allocs, 1,662 frees, 12,417,951 bytes allocated
+==4370== 
+==4370== 16 bytes in 1 blocks are still reachable in loss record 1 of 6
+==4370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4370==    by 0x109359: create_trie (mk.c:37)
+==4370==    by 0x109E88: main (mk.c:283)
+==4370== 
+==4370== 232 bytes in 1 blocks are still reachable in loss record 2 of 6
+==4370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4370==    by 0x1092DE: create_node (mk.c:23)
+==4370==    by 0x109E94: main (mk.c:284)
+==4370== 
+==4370== 162,082 bytes in 15,379 blocks are still reachable in loss record 3 of 6
+==4370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4370==    by 0x109423: insert (mk.c:52)
+==4370==    by 0x109EE6: main (mk.c:288)
+==4370== 
+==4370== 276,097 bytes in 35,763 blocks are still reachable in loss record 4 of 6
+==4370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4370==    by 0x109423: insert (mk.c:52)
+==4370==    by 0x10A0F5: main (mk.c:320)
+==4370== 
+==4370== 3,567,928 bytes in 15,379 blocks are still reachable in loss record 5 of 6
+==4370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4370==    by 0x1092DE: create_node (mk.c:23)
+==4370==    by 0x1093DA: insert (mk.c:50)
+==4370==    by 0x109EE6: main (mk.c:288)
+==4370== 
+==4370== 8,297,016 bytes in 35,763 blocks are still reachable in loss record 6 of 6
+==4370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4370==    by 0x1092DE: create_node (mk.c:23)
+==4370==    by 0x1093DA: insert (mk.c:50)
+==4370==    by 0x10A0F5: main (mk.c:320)
+==4370== 
+==4370== LEAK SUMMARY:
+==4370==    definitely lost: 0 bytes in 0 blocks
+==4370==    indirectly lost: 0 bytes in 0 blocks
+==4370==      possibly lost: 0 bytes in 0 blocks
+==4370==    still reachable: 12,303,371 bytes in 102,286 blocks
+==4370==         suppressed: 0 bytes in 0 blocks
+==4370== 
+==4370== For lists of detected and suppressed errors, rerun with: -s
+==4370== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

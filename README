@@ -1,0 +1,40 @@
+
+TEMA 3 STRUCTURI DE DATE SI ALGORITMI
+Bîrleanu Teodor Matei 314 CA
+
+		MAGIC KEYBOARD
+		
+	Am folosit propria implementare de trie inspirandu ma insa din
+laboratorul 11. Pentru fiecare nod din trie am pastrat cuvantul care
+este in nodul acela, daca acesta este valid sau nu(daca a fost inserat),
+frecventa aparitiei, numarul de copii si un vector de 26 de pointeri 
+pentru potentialele 26 de cuvinte ce se pot forma. Vectorul de copii 
+are semnificatia urmatoare : fiecare litera este indexata scazand 
+din codul ei ascii valorea literei 'a'. Astfel a va avea indexul 0
+b 1 si asa mai departe. In radacina este de mentionat faptul ca
+arborele nu contine nimic ca valore, are doar vectorul de pointeri.
+	Functia INSERT parcurge nodurile si creeaza acolo unde este
+nevoie iar, in diferite cazuri pot incrementa numarul de aparitii 
+al acestuia daca a mai fost deja adaugat. 
+	Functia DELETE sterge un nod primind parintele lui si pozitia
+nodului ce trebuie sters din vectorul de copii. Aceasta functie este
+apelata in cadrul functiei de stergere recursiva care odata cu stergerea
+unui cuvant verifica daca raman noduri care nu iau parte la niciun cuvant.
+In acest caz acele noduri sunt sterse pentru a folosi eficient memoria.
+	Functia SEARCH returneaza un pointer la nodul in care se termina
+cuvantul pe care il caut.
+	Functiile de autocomplete pentru cel mai scurt cuvant si pentru
+cel mai folosit cuvant plecand de la prefixul dat au la baza o parcurgere
+dfs in cadrul careia parcurg cuvintele cu prefixul dat si verific regula data
+(frecventa sau lungimea cuvantului). Pentru cel mai mic lexicografic parcurg
+arborele cat mai la 'stanga' alegand mereu primul copil gasit al fiecarui nod
+astfel voi fi sigur ca este cel mai mic lexicografic.
+	Functia AUTOCORRECT are la baza tot un dfs care parcurge trie ul.
+Folosesc o functie care verifica numarul de litere diferite dintre cuvantul
+la care sunt si cel de referinta. Daca numarul de diferente este cel dat(k) 
+sau mai mic, atunci voi afisa cuvantul. Prin parcurgerea dfs, parcurgand 
+vectorul de copii de la 0 la 25 ma asigur ca voi afisa cuvintele si in 
+ordine lexicografica.
+	Functia DELETE elibereaza toata memoria folosita de catre trie.
+	
+		
